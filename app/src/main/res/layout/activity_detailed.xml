@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailedActivity.DetailedActivity">
+    <include layout="@layout/toolbar_layout"
+        android:id="@+id/detailed_toolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="2dp"
+            >
+           <RelativeLayout
+               android:layout_margin="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:layout_width="150dp"
+                   android:layout_height="150dp"
+                   android:id="@+id/detailed_main_image"
+                   android:src="@drawable/r1m_img"/>
+               <View
+                   android:layout_width="1dp"
+                   android:layout_marginStart="20dp"
+                   android:layout_height="120dp"
+                   android:background="#9c9c9c"
+                   android:layout_centerVertical="true"
+                   android:layout_toEndOf="@+id/detailed_main_image"
+                   android:id="@+id/detailed_view_line"
+                   android:layout_marginEnd="20dp"
+                   android:visibility="invisible"
+                   />
+
+               <TextView
+                   android:id="@+id/detailed_bike_name"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="20dp"
+                   android:layout_toEndOf="@id/detailed_view_line"
+                   android:text="YAMAHA R1M"
+                   android:textSize="25sp"
+                   android:textStyle="bold" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Engine : "
+                   android:id="@+id/engine"
+                   android:layout_below="@id/detailed_bike_name"
+                   android:layout_alignStart="@id/detailed_bike_name"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginStart="5dp"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:lineSpacingExtra="5dp"
+                   android:text="998cc Inline \n4-Cylinder, \n4-Stroke, \n4-Valves, DOHC Engine "
+                   android:layout_toEndOf="@+id/engine"
+                   android:layout_alignTop="@id/engine"
+                   android:id="@+id/engine_details"
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Power : "
+                   android:id="@+id/power"
+                   android:layout_below="@id/engine_details"
+                   android:layout_alignStart="@id/detailed_bike_name"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginStart="5dp"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="200 PS @ 13500 rpm"
+                   android:layout_toEndOf="@+id/power"
+                   android:layout_alignTop="@id/power"
+                   android:id="@+id/power_details"
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Torque : "
+                   android:id="@+id/torque"
+                   android:layout_below="@id/power_details"
+                   android:layout_alignStart="@id/detailed_bike_name"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginStart="5dp"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="112.4 Nm @ 11500 rpm"
+                   android:layout_toEndOf="@+id/torque"
+                   android:layout_alignTop="@id/torque"
+                   android:id="@+id/torque_details"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:lineSpacingExtra="5dp"
+                   android:layout_below="@id/torque_details"
+                   android:text="The Yamaha YZF-R1M is powered by a 998cc, in-line four,liquid cooled engine which makes 200PS power. Alongwith advanced electronics and five different control systems, gets electronically controlled Ohlins suspension, lightweight carbon fairing  a digital interface that records racing information."
+                   />
+
+
+           </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:elevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_location"
+                    android:id="@+id/locationId"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nearest Showroom"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/locationId"
+                    android:textSize="20sp"
+                    />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
